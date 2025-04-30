@@ -1,0 +1,127 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+
+/* CAJA AZUL CON LOGO PD */
+
+.caja_azul {
+  display: flex;
+  background-color: #23283C;
+  height: 180px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd_logo {
+  margin-top: 15px;
+  height: 250px;
+  width: 250px;
+}
+
+/* SECCION CONTENEDOR  MANO ANILLO*/
+
+.contenedor_imagen_mano_anillo {
+  background-image: url('./assets/img/imagen_anillo_mano_PD.JPG');  
+  background-size: cover;
+  background-position: center 68%;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 100%;
+  display: flex;
+}
+
+.contenedor_imagen_mano_anillo::after {
+  content: ""; /* Obligatorio para que nos tome el ::after, o sea, se renderice. Pq el ::after está hecho para insertar 
+  decoraciones (en este caso la imagen mas oscura, se puede hacer lo mismo con los árboles.*/
+  position: absolute; /* Posicionamiento absoluto sobre el contenedor, q no se mueva cuando cambiamos otras cosas. */
+  top: 0;
+  left: 0;
+  height: 100%; /* Cubre toda la altura */
+  width: 100%; /* Cubre todo el ancho */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contenedor_imagen_mano_anillo {
+  position: relative; 
+  z-index: 1; 
+}
+
+.img_logo_pd {
+  height: 700px;
+  width: 750px;
+  position: relative;
+  z-index: 2; 
+}
+
+/* ACA VA EL FORMULARIO */
+
+/* ACA VA EL FORMULARIO */
+
+
+/* ACA VA EL CARROUSEL */
+
+.container_carrousel_parroquia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #23283C;
+  color: #D8CAB0;
+  width: 100%;
+  height: 35rem;
+  }
+
+.container_texto_boton_iglesia {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1px;
+}
+.boton_como_llegar_iglesia {
+  padding: 10px 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 40px;
+  background-color: #D8CAB0;
+  font-family: 'Lora';
+  color: #23283C;
+  margin-bottom: 55px;
+  font-size: 20px;
+}
+
+.boton_como_llegar_iglesia:hover {
+  background-color: #23283C;
+  color: #D8CAB0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.iglesia_carrousel {
+  width: 350px;
+  height: 230px;
+  border-radius: 10px;
+}
+
+.titulo_ceremonia {
+  font-family: 'Italiana';
+  font-size: 42px;
+  text-decoration: underline 1px ;
+}
+
+.subtitulo_uno {
+  font-family: 'Lora';
+  font-size: 20px;
+}
+
+.subtitlo_dos_iglesia {
+  font-family: 'Lora';
+  font-size: 15x;
+}

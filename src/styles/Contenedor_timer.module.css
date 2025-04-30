@@ -1,0 +1,175 @@
+.background_container_blanco {
+    background-color: #F2F1EF;
+    color: #D8CAB0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.background_overlay_arboles {
+    background-image: url('../assets/img/arbolesfondo.jpg'); 
+    height: 100%;
+    width: 100%;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faltan {
+    font-family: 'Italiana';
+    font-size: 70px;
+    font-weight: 200;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    color: #23283C;
+}
+
+hr {
+    width: 1000px;
+    color: #23283C;
+}
+
+.container_faltan {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 150px;
+    gap: 30px;
+}
+
+.circulo_azul {
+    background-color: #23283C;
+    height: 170px;
+    width: 170px;
+    border-radius: 70px;
+    text-align: center;
+}
+
+.hora {
+    font-family: 'Italiana';
+    font-weight: 200;
+    font-size: 80px;
+}
+
+.texto_hora {
+    padding: 25px;
+    position: relative  ;
+    margin-bottom: 10px;
+}
+
+.tiempo {
+    font-family: 'Lora';
+    font-weight: 200;
+    font-size: 25px;
+    color: #23283C;
+    margin-top: 100px;
+    margin-left: -10px;
+}
+
+.punto_faltan {
+    font-family: 'Lora';
+    font-size: 80px;
+    color: #23283C; /* o el color que quieras */
+    margin: 0 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_imagenes_faltan {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.img {
+    height: 550px;
+    width: 100%;
+    border-radius: 45px;
+}   
+
+/* PARTE DE ABAJO DE LAS IMAGENES */ 
+
+.container_boton_agendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 55px;
+}
+
+.boton {
+    font-family: 'Lora';
+    font-size: 15px;
+    background-color: #23283C;
+    color: #D8CAB0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 40px;
+
+}
+
+.boton:hover {
+    background-color: #D8CAB0;
+    color: #23283C;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.container_texto_fecha{
+    display: flex;
+    margin-top: 55px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.texto_agendar_fecha {
+    color: #23283C;
+    font-family: 'Lora';
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.texto {
+    text-align: center;
+    margin-top: 25px;
+    color: #23283C;
+    font-family: 'Lora';
+    font-size: 25px;
+    font-weight: 200;
+    width: 420px;
+    margin-bottom: 55px;
+}
+
+
+.hr {
+    width: 1000px;
+    color: #23283C;
+}
+
+.seis {
+    color: #D8CAB0;
+}
+

@@ -1,0 +1,37 @@
+.carousel {
+    width: 350px;
+    max-width: 230px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .image {
+    width: 350px;
+    height: 230px;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .dotsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333; /* El color del punto activo */
+  }
+  
