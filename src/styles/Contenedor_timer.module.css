@@ -103,7 +103,16 @@ hr {
     height: 550px;
     width: 100%;
     border-radius: 45px;
-}   
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /*Esto seria el tiempo en que tarda en hacerse la animacion del hover*/
+    object-fit: cover;
+}
+
+.img:hover {
+    transform: scale(1.05); /* esta prop, lo que hace es aumentar un poquito el tamaño de la imagen */
+    filter: brightness(80%); /* esto es para oscurecer la imagen */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* esta es una sombra del hover */
+}
+
 
 /* PARTE DE ABAJO DE LAS IMAGENES */ 
 
