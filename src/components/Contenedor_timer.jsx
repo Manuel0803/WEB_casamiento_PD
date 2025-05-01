@@ -75,7 +75,7 @@ export const Contenedor_timer = () => {
                     <button
                         className={styles.boton}
                         type="button"
-                        onClick={() => window.open('https://calendar.app.google/wG9LC9UaicXGWAGz9', '_blank')}
+                        onClick={() => window.open('https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Nmd1Z2F1aG1oMmowOThuZnIzb2kyODlndjggY2FzYW1pZW50b2p1bmlvMTRAbQ&tmsrc=casamientojunio14%40gmail.com', '_blank')}
                     >
                         AGENDAR EVENTO
                     </button>
