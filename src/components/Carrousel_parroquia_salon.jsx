@@ -24,7 +24,7 @@ export default function Carrousel_parroquia_salon() {
         alt={`Slide ${index}`}
         className={styles.image}
       />
-      
+
       {/* Los puntos de navegación */}
       <div className={styles.dotsContainer}>
         {images.map((_, i) => (

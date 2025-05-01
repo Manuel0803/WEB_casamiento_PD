@@ -72,7 +72,13 @@ export const Contenedor_timer = () => {
 
                 <div className={styles.container_boton_agendar}>
 
-                    <button className={styles.boton} type="button">AGENDAR EVENTO</button>
+                    <button
+                        className={styles.boton}
+                        type="button"
+                        onClick={() => window.open('https://calendar.app.google/wG9LC9UaicXGWAGz9', '_blank')}
+                    >
+                        AGENDAR EVENTO
+                    </button>
 
                     <div className={styles.container_texto_fecha}>
                         <p className={styles.texto_agendar_fecha}>14/<span className={styles.seis}>06</span>/25 <br /> Sabado 14 de Junio</p>

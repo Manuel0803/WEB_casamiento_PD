@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -26,7 +26,7 @@
 /* SECCION CONTENEDOR  MANO ANILLO*/
 
 .contenedor_imagen_mano_anillo {
-  background-image: url('./assets/img/imagen_anillo_mano_PD.JPG');  
+  background-image: url('./assets/img/imagen_anillo_mano_PD.JPG');
   background-size: cover;
   background-position: center 68%;
   align-items: center;
@@ -37,26 +37,30 @@
 }
 
 .contenedor_imagen_mano_anillo::after {
-  content: ""; /* Obligatorio para que nos tome el ::after, o sea, se renderice. Pq el ::after está hecho para insertar 
+  content: "";
+  /* Obligatorio para que nos tome el ::after, o sea, se renderice. Pq el ::after está hecho para insertar 
   decoraciones (en este caso la imagen mas oscura, se puede hacer lo mismo con los árboles.*/
-  position: absolute; /* Posicionamiento absoluto sobre el contenedor, q no se mueva cuando cambiamos otras cosas. */
+  position: absolute;
+  /* Posicionamiento absoluto sobre el contenedor, q no se mueva cuando cambiamos otras cosas. */
   top: 0;
   left: 0;
-  height: 100%; /* Cubre toda la altura */
-  width: 100%; /* Cubre todo el ancho */
+  height: 100%;
+  /* Cubre toda la altura */
+  width: 100%;
+  /* Cubre todo el ancho */
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .contenedor_imagen_mano_anillo {
-  position: relative; 
-  z-index: 1; 
+  position: relative;
+  z-index: 1;
 }
 
 .img_logo_pd {
   height: 700px;
   width: 750px;
   position: relative;
-  z-index: 2; 
+  z-index: 2;
 }
 
 /* ACA VA EL FORMULARIO */
@@ -76,7 +80,7 @@
   color: #D8CAB0;
   width: 100%;
   height: 40rem;
-  }
+}
 
 .container_texto_boton_iglesia {
   display: flex;
@@ -85,6 +89,7 @@
   justify-content: center;
   gap: 1px;
 }
+
 .boton_como_llegar_iglesia {
   padding: 10px 30px;
   margin-left: 30px;
@@ -114,7 +119,7 @@
   margin-top: 1rem;
   font-family: 'Italiana';
   font-size: 42px;
-  text-decoration: underline 1px ;
+  text-decoration: underline 1px;
 }
 
 .subtitulo_uno {
@@ -141,7 +146,7 @@
   color: #23283C;
   width: 100%;
   height: 40rem;
-  }
+}
 
 .container_texto_boton_salon {
   display: flex;
@@ -179,7 +184,7 @@
 .titulo_salon {
   font-family: 'Italiana';
   font-size: 42px;
-  text-decoration: underline 1px ;
+  text-decoration: underline 1px;
   padding: 4px;
   margin-top: 1rem;
 }
@@ -189,6 +194,7 @@
   padding: 5px;
   font-family: 'Lora';
 }
+
 /* SECCION DRESSS CODE */
 .container_dress {
   display: flex;
@@ -228,10 +234,11 @@ hr {
   border: none;
   height: 1.3px;
   background-color: #D8CAB0;
-  width: 80%; /* o 100%, o un valor exacto */
+  width: 80%;
+  /* o 100%, o un valor exacto */
 }
 
-.dress_text{
+.dress_text {
   font-family: 'Lora';
   font-weight: lighter;
   font-size: 18px;
@@ -254,13 +261,13 @@ hr {
   gap: 20px;
 }
 
-.container_text_regalos h3{
+.container_text_regalos h3 {
   font-family: 'Italiana';
   font-size: 80px;
   color: #23283C;
-  font-weight:lighter;
+  font-weight: lighter;
   margin-top: 50px;
-}   
+}
 
 .container_text_regalos p {
   padding-top: 5px;
@@ -274,6 +281,7 @@ hr {
   font-family: 'Lora';
   font-size: 20px;
 }
+
 .alias_button {
   font-family: 'Lora';
   font-size: 15px;
@@ -287,7 +295,7 @@ hr {
   border-radius: 40px;
 }
 
-.alias_button:hover { 
+.alias_button:hover {
   background-color: #D8CAB0;
   color: #23283C;
   transition: 0.3s ease-in-out;
@@ -311,7 +319,7 @@ hr {
   font-family: 'Italiana';
   font-size: 80px;
   color: #D8CAB0;
-  font-weight:lighter;
+  font-weight: lighter;
   margin-bottom: 50px;
 }
 
@@ -331,21 +339,18 @@ hr {
   font-family: 'Lora';
   display: flex;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 8rem;
   align-items: center;
-  text-align: center;
 }
 
 .container_instagram_items p {
   font-size: 20px;
-}
-
-.text_instagram {
   text-align: center;
-  justify-content: center;
+  text-wrap: balance;
 }
 
-.photos_button{
+
+.photos_button {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 80px;
@@ -365,7 +370,7 @@ hr {
   cursor: pointer;
 }
 
-.photos_button_boda{
+.photos_button_boda {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 130px;
@@ -416,7 +421,7 @@ hr {
   font-size: 80px;
   color: #23283C;
   margin-bottom: 5px;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 
 .container_text_playlist p {
@@ -443,7 +448,7 @@ hr {
   border-radius: 40px;
 }
 
-.sugerir_cancion_button:hover { 
+.sugerir_cancion_button:hover {
   background-color: #D8CAB0;
   color: #23283C;
   transition: 0.3s ease-in-out;
@@ -470,14 +475,16 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; /* Cubre toda la altura */
-  width: 100%; /* Cubre todo el ancho */
+  height: 100%;
+  /* Cubre toda la altura */
+  width: 100%;
+  /* Cubre todo el ancho */
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .footer-container p {
-  position: relative; 
-  z-index: 1; 
+  position: relative;
+  z-index: 1;
   color: #F2F1EF;
   font-family: 'Lora';
   font-size: 20px;

@@ -18,11 +18,11 @@ const Formulario = () => {
             <div className={styles.contenido}>
                 <h2>CONFIRMÁ TU ASISTENCIA</h2>
                 <hr />
-                <button 
-                className={styles.botonTarjeta} 
-                onClick={() => setMostrarTarjeta(true)}>
+                <button
+                    className={styles.botonTarjeta}
+                    onClick={() => setMostrarTarjeta(true)}>
                     VALOR DE LA TARJETA
-                    </button>
+                </button>
                 <TarjetaModal visible={mostrarTarjeta} onClose={() => setMostrarTarjeta(false)} />
 
                 <p>¿Por cuántas personas confirmarás?</p>
