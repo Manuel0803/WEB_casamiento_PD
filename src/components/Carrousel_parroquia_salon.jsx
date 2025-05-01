@@ -31,7 +31,6 @@ export default function Carrousel_parroquia_salon() {
           <div
             key={i}
             className={`${styles.dot} ${i === index ? styles.active : ''}`}
-            onClick={() => setIndex(i)} // Cambiar la imagen al hacer clic en el punto
           />
         ))}
       </div>

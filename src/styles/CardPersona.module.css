@@ -1,0 +1,82 @@
+.card {
+    background: #d4d4d8;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    text-align: left;
+    font-family: 'Lora';
+    width: 80%;
+    margin-left: 3.7rem;
+}
+
+.card p {
+    text-align: center;
+}
+input{
+    width: 100%;
+    padding: 0.8rem;
+    padding-top: 0.1rem;
+    margin: 0.5rem 0;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid #23283C;
+    border-radius: 2px;
+    font-family: 'Lora';
+    background-color: #d4d4d8;
+    color: #000000;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #000000;
+    font-family: 'Lora';
+}
+
+input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+label {
+    font-family: 'Lora';
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 1rem; 
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    background-color: #d4d4d8;
+    color: #000000;
+    border: 2px solid transparent; 
+    border-bottom: 2px solid #23283C; 
+    border-radius: 2px;
+    font-family: 'Lora';
+    font-size: 1rem;
+    line-height: 1.5; 
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2323283C' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 12px;
+    box-sizing: border-box;
+}
+
+
+select:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #23283C;
+    border-color: #555;
+}
+
+
+select option {
+    background-color: #23283C;
+    color: #D8CAB0;
+    padding: 1rem;
+}
+

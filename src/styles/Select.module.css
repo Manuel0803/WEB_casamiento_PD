@@ -1,0 +1,46 @@
+.selectContainer {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+}
+
+.selectInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    color: #0e0e0e;
+    font-size: 1rem;
+    font-family: inherit;
+    border: none;
+    border-bottom: 2px solid #222;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.selectInput:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.selectInput option {
+    background-color: #111831;
+    /* azul oscuro */
+    color: #f3f0e6;
+    /* blanco cálido */
+    padding: 1rem;
+}
+
+/* Scrollbar (opcional para estilizarla un poco más) */
+.selectInput option::-webkit-scrollbar {
+    width: 8px;
+}
+
+.selectInput option::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
