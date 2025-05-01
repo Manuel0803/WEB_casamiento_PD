@@ -4,13 +4,15 @@ import img2 from '../assets/img/imagen_medio.jpg'
 import img3 from '../assets/img/imagen_choque.jpeg'
 import img4 from '../assets/img/arboles.png'
 
+
+
 export const Contenedor_timer = () => {
 return (
+
     <section className={styles.background_container_blanco}>
 
         <div className={styles.background_overlay_arboles}>
         
-
             <p className={styles.faltan}>FALTAN</p>
             <hr/>
 

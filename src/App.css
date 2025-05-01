@@ -125,3 +125,298 @@
   font-family: 'Lora';
   font-size: 15x;
 }
+
+/* SECCION DRESSS CODE */
+.container_dress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #23283C;
+  color: #D8CAB0;
+  width: 100%;
+  height: 25rem;
+  gap: 3rem;
+}
+
+.container_text_dress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #D8CAB0;
+}
+
+.container_text_dress h3 {
+  font-family: 'Italiana';
+  font-size: 80px;
+  color: #D8CAB0;
+  font-weight: lighter;
+}
+
+.container_text_dress p {
+  font-family: 'Lora';
+  font-size: 20px;
+  color: #D8CAB0;
+  font-weight: lighter;
+}
+
+hr {
+  border: none;
+  height: 1.3px;
+  background-color: #D8CAB0;
+  width: 80%; /* o 100%, o un valor exacto */
+}
+
+.dress_text{
+  font-family: 'Lora';
+  font-weight: lighter;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* SECCION REGALOS */
+
+.container_regalos {
+  width: 100%;
+  height: 25rem;
+  background-color: #D8CAB0;
+}
+
+.container_text_regalos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container_text_regalos h3{
+  font-family: 'Italiana';
+  font-size: 80px;
+  color: #23283C;
+  font-weight:lighter;
+  margin-top: 50px;
+}   
+
+.container_text_regalos p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 40px;
+  background-color: #D8CAB0;
+  color: #23283C;
+  text-align: center;
+  font-family: 'Lora';
+  font-size: 20px;
+}
+.alias_button {
+  font-family: 'Lora';
+  font-size: 15px;
+  background-color: #23283C;
+  color: #D8CAB0;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 120px;
+  padding-right: 120px;
+  border-radius: 40px;
+}
+
+.alias_button:hover { 
+  background-color: #D8CAB0;
+  color: #23283C;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* SECCION INSTAGRAM */
+
+.container_instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #23283C;
+  color: #D8CAB0;
+  width: 100%;
+  height: 25rem;
+}
+
+.container_instagram h3 {
+  font-family: 'Italiana';
+  font-size: 80px;
+  color: #D8CAB0;
+  font-weight:lighter;
+  margin-bottom: 50px;
+}
+
+.boda_p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 40px;
+  background-color: #D8CAB0;
+  color: #23283C;
+  text-align: center;
+  font-family: 'Lora';
+}
+
+.container_instagram_items {
+  font-family: 'Lora';
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  align-items: center;
+  text-align: center;
+}
+
+.container_instagram_items p {
+  font-size: 20px;
+}
+
+.text_instagram {
+  text-align: center;
+  justify-content: center;
+}
+
+.photos_button{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 40px;
+  background-color: #D8CAB0;
+  color: #23283C;
+  text-align: center;
+  font-family: 'Lora';
+  font-size: 15px;
+}
+
+.photos_button:hover {
+  background-color: #23283C;
+  color: #D8CAB0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.photos_button_boda{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 130px;
+  padding-right: 130px;
+  border-radius: 40px;
+  background-color: #D8CAB0;
+  color: #23283C;
+  text-align: center;
+  font-family: 'Lora';
+  font-size: 15px;
+}
+
+.photos_button_boda:hover {
+  background-color: #23283C;
+  color: #D8CAB0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.container_instagram img {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 3.8%;
+}
+
+/* SECCION SPOTIFY */
+
+.container_playlist {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #D8CAB0;
+}
+
+.container_text_playlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_text_playlist h3 {
+  font-family: 'Italiana';
+  font-size: 80px;
+  color: #23283C;
+  margin-bottom: 5px;
+  font-weight:lighter;
+}
+
+.container_text_playlist p {
+  font-family: 'Lora';
+  font-size: 20px;
+  color: #23283C;
+  margin-bottom: 20px;
+}
+
+.container_playlist img {
+  z-index: 1;
+  width: 3.8%;
+}
+
+.sugerir_cancion_button {
+  font-family: 'Lora';
+  font-size: 15px;
+  background-color: #23283C;
+  color: #D8CAB0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+  border-radius: 40px;
+}
+
+.sugerir_cancion_button:hover { 
+  background-color: #D8CAB0;
+  color: #23283C;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* SECCION FOOTER */
+
+.footer-container {
+  width: 100%;
+  height: 30rem;
+  background-image: url('./assets/img/header_imagen.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; /* Cubre toda la altura */
+  width: 100%; /* Cubre todo el ancho */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-container p {
+  position: relative; 
+  z-index: 1; 
+  color: #F2F1EF;
+  font-family: 'Lora';
+  font-size: 20px;
+  text-align: center;
+}
