@@ -4,33 +4,53 @@ import pdLOGO from './assets/img/pdLOGO.png'
 import { Contenedor_timer } from './components/Contenedor_timer'
 import LOGOPD from './assets/img/LOGOPD.png'
 import Carrousel_parroquia_salon from './components/Carrousel_parroquia_salon'
-<<<<<<< HEAD
-import instagram from './assets/img/INSTAGRAM.png'
-import spotify from './assets/img/SPOTIFY.png'
-=======
 import Formulario from './components/Formulario'
 import Carrousel_Salon from './components/Carrousel_Salon'
->>>>>>> ef511ebe7a36f1749718f0f7c7114914f121c00b
+import instagram from './assets/img/INSTAGRAM.png'
+import spotify from './assets/img/SPOTIFY.png'
+import { TarjetaModalRegalos } from './components/TarjetaModalRegalos'
+
 
 function App() {
 
-    return (
-        
-    <>
-<<<<<<< HEAD
-    
+    const [mostrarTarjeta, setMostrarTarjeta] = useState(false);
 
-        <Header/>
-        <div className="caja_azul">
-        <img className="pd_logo" src={pdLOGO}/>
-        </div>
-        <Contenedor_timer/>
-        <section className="contenedor_imagen_mano_anillo"> 
-        <img className='img_logo_pd' src={LOGOPD}/>  
-        </section>
+    return (
+    <>
+      {/* COMPONENTE HEADER */}
+      <Header />
+
+      {/* FRANJA AZUL - LOGO P&D */}
+      <div className="caja_azul">
+        <img className="pd_logo" src={pdLOGO} />
+      </div>
+
+      {/* COMPONENTE TIMER, AGENDAR EVENTO */}
+      <Contenedor_timer />
+
+      {/* SECCION DE IMAGEN - ANILLO */}
+      <section className="contenedor_imagen_mano_anillo">
+        <img className='img_logo_pd' src={LOGOPD} />
+      </section>
+
+
+      {/*SECCION FORMULARIO ASISTENCIA */}
+      <section className="formulario_asistencia">
+        <Formulario />
+
+      </section>
+
         <section className="container_carrousel_parroquia">
 
-        <button type="button" className="boton_como_llegar_iglesia">COMO LLEGAR</button>
+        <button
+        onClick={() => window.open('https://maps.app.goo.gl/X6CrcXTZ8aamX1y26', '_blank')} 
+        type="button" 
+        className="boton_como_llegar_iglesia"
+        
+        >
+          COMO LLEGAR
+        </button>
+
         <div className="container_texto_boton_iglesia">
 
         <div className="carrousel_puntitos">
@@ -38,12 +58,39 @@ function App() {
         </div>
 
         <p className="titulo_ceremonia">CEREMONIA</p>
-        <p className="subtitulo_uno">Parroquia “San Francisco Javier”<br/>
-                17:00hs</p>
+        <p className="subtitulo_uno">Parroquia “San Francisco Javier”<br />
+            17:00hs</p>
         <p className="subtitlo_dos_iglesia">Les agradecemos llegar 15 minutos antes del horario previsto.</p>
 
-        </div>
+          </div>
         </section>
+
+
+      {/* SECCION 2DO CARROUSEL */}
+      <section class="container_carrousel_salon">
+        <button
+        onClick={() => window.open('https://maps.app.goo.gl/3Y5ZAGGKew6nT3EVA', '_blank')} 
+        type="button" 
+        class="boton_como_llegar_salon"
+        
+        >
+          COMO LLEGAR
+        
+        </button>
+        <div class="container_texto_boton_salon">
+
+          <div class="carrousel_puntitos">
+            <Carrousel_Salon /> {/* COMPONENTE CAROUSEL */}
+          </div>
+
+          <p class="titulo_salon">FIESTA</p>
+          <p class="subtitulo_uno_salon">
+            Salón “El Parque”<br />
+            18:30hs</p>
+
+        </div>
+
+      </section>
 
         <section className='container_dress'>
         <div className='container_text_dress'>
@@ -64,7 +111,14 @@ function App() {
                 hacernos un obsequio, nos encantaría que nos ayuden <br/>
                 a cumplir el sueño de nuestra luna de miel.
             </p>
-            <button className='alias_button'>ALIAS</button>
+
+            <button
+            className='alias_button'
+            onClick={() => setMostrarTarjeta(true)}> 
+              ALIAS
+              </button>
+              <TarjetaModalRegalos visible={mostrarTarjeta}onclose={()=>setMostrarTarjeta(false)}/>
+
         </div>
     </section>
 
@@ -95,81 +149,6 @@ function App() {
         <p>Gracias por acompañarnos y compartir nuestra felicidad...</p>
     </footer>    
 
-=======
-      {/* COMPONENTE HEADER */}
-      <Header />
-
-      {/* FRANJA AZUL - LOGO P&D */}
-      <div className="caja_azul">
-        <img className="pd_logo" src={pdLOGO} />
-      </div>
-
-      {/* COMPONENTE TIMER, AGENDAR EVENTO */}
-      <Contenedor_timer />
-
-      {/* SECCION DE IMAGEN - ANILLO */}
-      <section className="contenedor_imagen_mano_anillo">
-        <img className='img_logo_pd' src={LOGOPD} />
-      </section>
-
-
-      {/*SECCION FORMULARIO ASISTENCIA */}
-      <section className="formulario_asistencia">
-        <Formulario />
-      </section>
-
-
-      {/* SECCION DE 1ER CARROUSEL, CÓMO LLEGAR, UBICACION DEL LUGAR */}
-      <section className="container_carrousel_parroquia">
-
-        <button
-          type="button"
-          className="boton_como_llegar_iglesia"
-          onClick={() => window.open('https://maps.app.goo.gl/X6CrcXTZ8aamX1y26', '_blank')}
-        >
-          COMO LLEGAR
-        </button>
-
-        <div className="container_texto_boton_iglesia">
-
-          <div className="carrousel_puntitos">
-            <Carrousel_parroquia_salon /> {/* COMPONENTE CAROUSEL */}
-          </div>
-
-          <p className="titulo_ceremonia">CEREMONIA</p>
-          <p className="subtitulo_uno">Parroquia “San Francisco Javier”<br />
-            17:00hs</p>
-          <p className="subtitlo_dos_iglesia">Les agradecemos llegar 15 minutos antes del horario previsto.</p>
-
-        </div>
-      </section>
-
-
-      {/* SECCION 2DO CARROUSEL */}
-      <section class="container_carrousel_salon">
-        <button 
-        type="button" 
-        class="boton_como_llegar_salon"
-        
-        >
-          COMO LLEGAR
-        
-        </button>
-        <div class="container_texto_boton_salon">
-
-          <div class="carrousel_puntitos">
-            <Carrousel_Salon /> {/* COMPONENTE CAROUSEL */}
-          </div>
-
-          <p class="titulo_salon">FIESTA</p>
-          <p class="subtitulo_uno_salon">
-            Salón “El Parque”<br />
-            18:30hs</p>
-
-        </div>
-
-      </section>
->>>>>>> ef511ebe7a36f1749718f0f7c7114914f121c00b
     </>
     )
 }
