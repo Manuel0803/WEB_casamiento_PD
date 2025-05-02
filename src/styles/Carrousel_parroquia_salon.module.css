@@ -1,18 +1,29 @@
 /* Estilo general del carrusel */
 .carousel {
-  width: 100%;
-  max-width: 450px;
-  height: 20rem; 
+  width: 100%; /* Ocupa todo el ancho del contenedor padre */
+  max-width: 450px; /* Limita el tamaño máximo del carrusel */
+  margin: 0 auto; /* Centra el carrusel horizontalmente */
+  height: 20rem; /* Puedes cambiar a auto o ajustar en media queries */
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra suave para destacar el carrusel */
-  transition: transform 0.3s ease; /* Transición suave para cuando se hace hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
   border-radius: 5px;
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 600px) {
+  .carousel {
+    height: 15rem; /* Reduce la altura en pantallas pequeñas */
+    max-width: 90%; /* Opcional: hace que el ancho máximo sea el 90% del contenedor en pantallas pequeñas */
+  }
+  /* Puedes ajustar también el max-width si quieres */
+  /* Ejemplo: max-width: 100%; */
 }
 
 /* Efecto de hover en el carrusel */
 .carousel:hover {
-  transform: scale(1.03); /* Aumenta ligeramente el tamaño del carrusel */
+  transform: scale(1.03);
   border-radius: 5px;
 }
 
@@ -22,17 +33,17 @@
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease; /* Transición suave entre las imágenes */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
 }
 
 /* Efecto de hover en la imagen */
 .carousel:hover .image {
-  transform: scale(1.05); /* Aumenta ligeramente la imagen cuando se pasa el mouse */
-  opacity: 0.9; /* Reduce la opacidad */
+  transform: scale(1.05);
+  opacity: 0.9;
   border-radius: 5px;
 }
 
-/* Estilos de los puntos  */
+/* Estilos de los puntos */
 .dotsContainer {
   display: flex;
   justify-content: center;
@@ -53,10 +64,10 @@
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Efecto de hover en los puntos */
+/* Efecto en hover de los puntos */
 .carousel:hover .dot {
-  opacity: 1; /* Hace que los puntos sean más visibles cuando se pasa el mouse */
-  transform: scale(1.2); /* Aumenta  el tamaño de los puntos */
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 /* Punto activo */
@@ -64,8 +75,15 @@
   background-color: #333;
 }
 
-@media (max-width: 600px) {
+/* Media queries adicionales para mejorar aún más la responsividad */
+@media (max-width: 480px) {
   .carousel {
-    max-width: 100%; /* Ajusta el carrusel al 100% en pantallas pequeñas */
+    height: 12rem; /* Más pequeño en pantallas muy pequeñas */
+    max-width: 90%; /* Asegura que en pantallas muy pequeñas no ocupe todo el ancho */
+  }
+  /* Opcional: ajustar tamaño de los puntos */
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }
