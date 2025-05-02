@@ -1,6 +1,7 @@
 .carousel {
     width: 100%;
     max-width: 450px;
+    margin: 0 auto; /* Centrado horizontal */
     height: 20rem;
     overflow: hidden;
     position: relative;
@@ -65,7 +66,7 @@
 /* Responsive */
 @media (max-width: 600px) {
     .carousel {
-        max-width: 100%;
+        max-width: 100%; /* Asegura que en pantallas pequeñas no pase del 100% del contenedor */
         height: 16rem;
     }
 }
