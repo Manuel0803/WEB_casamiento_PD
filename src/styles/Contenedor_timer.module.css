@@ -6,7 +6,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /*------------ */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,13 +13,13 @@
 }
 
 .background_overlay_arboles {
-    background-image: url('../assets/img/arbolesfondo.jpg'); 
+    background-image: url('../assets/img/arbolesfondo.jpg');
     height: 100%;
     width: 100%;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    z-index: 1; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,7 +65,7 @@ hr {
 
 .texto_hora {
     padding: 25px;
-    position: relative  ;
+    position: relative;
     margin-bottom: 10px;
 }
 
@@ -77,12 +76,13 @@ hr {
     color: #23283C;
     margin-top: 100px;
     margin-left: -10px;
+    
 }
 
 .punto_faltan {
     font-family: 'Lora';
     font-size: 80px;
-    color: #23283C; /* o el color que quieras */
+    color: #23283C;
     margin: 0 20px;
     margin-bottom: 50px;
     display: flex;
@@ -103,18 +103,15 @@ hr {
     height: 550px;
     width: 100%;
     border-radius: 45px;
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /*Esto seria el tiempo en que tarda en hacerse la animacion del hover*/
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
     object-fit: cover;
 }
 
 .img:hover {
-    transform: scale(1.05); /* esta prop, lo que hace es aumentar un poquito el tamaño de la imagen */
-    filter: brightness(80%); /* esto es para oscurecer la imagen */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* esta es una sombra del hover */
+    transform: scale(1.05);
+    filter: brightness(80%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-
-
-/* PARTE DE ABAJO DE LAS IMAGENES */ 
 
 .container_boton_agendar {
     display: flex;
@@ -134,7 +131,6 @@ hr {
     padding-left: 90px;
     padding-right: 90px;
     border-radius: 40px;
-
 }
 
 .boton:hover {
@@ -144,7 +140,7 @@ hr {
     cursor: pointer;
 }
 
-.container_texto_fecha{
+.container_texto_fecha {
     display: flex;
     margin-top: 55px;
     justify-content: center;
@@ -172,13 +168,91 @@ hr {
     margin-bottom: 55px;
 }
 
-
-.hr {
-    width: 1000px;
-    color: #23283C;
-}
-
 .seis {
     color: #D8CAB0;
 }
 
+@media (max-width: 768px) {
+    .faltan {
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    hr {
+        width: 80%;
+    }
+
+    .container_faltan {
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        gap: 20px;
+    }
+
+    .circulo_azul {
+        height: 120px;
+        width: 120px;
+        border-radius: 60px;
+    }
+
+    .hora {
+        font-size: 50px;
+    }
+
+    .tiempo {
+        font-size: 18px;
+        margin-top: 50px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .punto_faltan {
+        font-size: 50px;
+        margin-bottom: 2px;
+    }
+
+    .container_imagenes_faltan {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .container_boton_agendar {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .boton {
+        font-size: 14px;
+        padding: 15px 40px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .container_texto_fecha {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    .texto_agendar_fecha {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .texto {
+        font-size: 18px;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+}

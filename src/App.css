@@ -15,57 +15,90 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
+/* La imagen PD logo */
 .pd_logo {
-  margin-top: 15px;
   height: 250px;
   width: 250px;
+  max-width: 100%; 
+  height: auto; 
+  object-fit: contain; 
+  margin-top: 15px;
+}
+
+/* Media query para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+  .caja_azul {
+    flex-direction: column; 
+    height: auto; 
+    padding: 20px;
+  }
+  .pd_logo {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 /* SECCION CONTENEDOR  MANO ANILLO*/
 
 .contenedor_imagen_mano_anillo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Usamos porcentaje de la altura de la vista para adaptarnos mejor */
+  width: 100%;
   background-image: url('./assets/img/imagen_anillo_mano_PD.JPG');
   background-size: cover;
   background-position: center 68%;
-  align-items: center;
-  justify-content: center;
-  height: 800px;
-  width: 100%;
-  display: flex;
+  overflow: hidden;
 }
 
+/* Capa oscura overlay */
 .contenedor_imagen_mano_anillo::after {
   content: "";
-  /* Obligatorio para que nos tome el ::after, o sea, se renderice. Pq el ::after está hecho para insertar 
-  decoraciones (en este caso la imagen mas oscura, se puede hacer lo mismo con los árboles.*/
   position: absolute;
-  /* Posicionamiento absoluto sobre el contenedor, q no se mueva cuando cambiamos otras cosas. */
   top: 0;
   left: 0;
   height: 100%;
-  /* Cubre toda la altura */
   width: 100%;
-  /* Cubre todo el ancho */
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1; /* Debe estar por encima del background pero por debajo del logo */
 }
 
+/* Para asegurarnos que el contenido (logo) esté sobre la capa oscura */
 .contenedor_imagen_mano_anillo {
-  position: relative;
-  z-index: 1;
-}
-
-.img_logo_pd {
-  height: 700px;
-  width: 750px;
   position: relative;
   z-index: 2;
 }
 
-/* ACA VA EL FORMULARIO */
+/* Logo */
+.img_logo_pd {
+  max-width: 90%; /* Para que no desborde en pantallas pequeñas */
+  height: auto; /* Para mantener proporciones */
+  max-height: 80vh; /* Limitar altura en vistas pequeñas y mantener proporcionalidad */
+  position: relative;
+  z-index: 2;
+}
 
-/* ACA VA EL FORMULARIO */
+/* Responsividad adicional en media queries */
+@media(max-width: 1024px) {
+  .img_logo_pd {
+    max-height: 60vh; /* Menor altura en tablets y pantallas medianas */
+  }
+}
+
+@media(max-width: 768px) {
+  .contenedor_imagen_mano_anillo {
+    height: 70vh; /* Un poco menor en móviles */
+  }
+  .img_logo_pd {
+    max-height: 50vh; /* Ajustar tamaño en móviles */
+  }
+}
 
 
 /* 1ER CARROUSEL */
@@ -269,16 +302,14 @@ hr {
   margin-top: 50px;
 }
 
-.container_text_regalos p {
+.text_regal {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 100px;
   padding-right: 100px;
-  border-radius: 40px;
-  background-color: #D8CAB0;
-  color: #23283C;
   text-align: center;
   font-family: 'Lora';
+  color: #23283C;
   font-size: 20px;
 }
 
@@ -455,8 +486,116 @@ hr {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+
+  /* SECCION DRESS CODE */
+  .container_dress {
+    height: auto;
+    padding: 3rem 1rem;
+    gap: 2rem;
+  }
+
+  .container_text_dress h3 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .container_text_dress p,
+  .dress_text {
+    font-size: 16px;
+    padding: 0 1rem;
+  }
+
+  /* SECCION REGALOS */
+  .container_regalos {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .container_text_regalos h3 {
+    font-size: 45px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .container_text_regalos p {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .alias_button {
+    padding: 10px 40px;
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+
+  /* SECCION INSTAGRAM */
+  .container_instagram {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .container_instagram h3 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .container_instagram_items {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container_instagram_items p {
+    font-size: 16px;
+    padding: 0 1rem;
+  }
+
+  .boda_p {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .photos_button,
+  .photos_button_boda {
+    padding: 10px 40px;
+    font-size: 14px;
+  }
+
+  .container_instagram img {
+    width: 10%;
+  }
+
+  /* SECCION SPOTIFY */
+  .container_playlist {
+    height: auto;
+    padding: 3rem 1rem;
+    gap: 2rem;
+  }
+
+  .container_text_playlist h3 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .container_text_playlist p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .container_playlist img {
+    width: 10%;
+  }
+
+  .sugerir_cancion_button {
+    padding: 10px 40px;
+    font-size: 14px;
+  }
+}
 /* SECCION FOOTER */
 
+/* Estilos base del footer */
 .footer-container {
   width: 100%;
   height: 30rem;
@@ -468,6 +607,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .footer-container::after {
@@ -476,10 +617,9 @@ hr {
   top: 0;
   left: 0;
   height: 100%;
-  /* Cubre toda la altura */
   width: 100%;
-  /* Cubre todo el ancho */
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0; /* Para que esté debajo del texto */
 }
 
 .footer-container p {
@@ -489,4 +629,31 @@ hr {
   font-family: 'Lora';
   font-size: 20px;
   text-align: center;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* ==========================
+  Media queries para responsividad
+========================== */
+@media(max-width: 1024px) {
+  /* En tablets y pantallas medias */
+  .footer-container {
+    height: auto; /* La altura se ajusta automáticamente en dispositivos pequeños */
+    padding: 2rem;
+  }
+  .footer-container p {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 768px) {
+  /* En móviles */
+  .footer-container {
+    height: auto; /* La altura se ajusta según contenido */
+    padding: 2rem 1rem;
+  }
+  .footer-container p {
+    font-size: 16px;
+  }
 }

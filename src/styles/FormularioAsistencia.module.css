@@ -23,6 +23,7 @@
     z-index: 1;
 }
 
+/* Contenido centrado y con ancho máximo */
 .contenido {
     position: relative;
     z-index: 2;
@@ -33,12 +34,14 @@
     box-sizing: border-box;
 }
 
+/* Separador */
 .contenido hr {
     border: 0.2px solid #23283C;
     width: 100%;
     margin: 20px auto;
 }
 
+/* Título */
 .contenido h2 {
     font-family: 'Lora';
     color: #23283C;
@@ -47,21 +50,23 @@
     font-weight: 400;
 }
 
+/* Párrafo */
 .contenido p {
     font-size: 20px;
     padding: 25px;
     font-family: 'Lora';
 }
 
+/* Selector personalizado */
 .select {
     width: 80%;
+    max-width: 100%;
     padding: 0.8rem;
     padding-right: 2.5rem;
     margin-bottom: 1rem;
     background-color: #F2F1EF;
-    color: #000000;
+    color: #000;
     border: none;
-    border-radius: 0;
     border-bottom: 3px solid #23283C;
     font-family: 'Lora';
     font-size: 1rem;
@@ -79,12 +84,14 @@
     border-color: #555;
 }
 
+/* Opciones del select */
 .select option {
     background-color: #23283C;
     color: #D8CAB0;
     padding: 1rem;
 }
 
+/* Botones */
 .botonTarjeta,
 .botonConfirmar {
     font-family: 'Lora';
@@ -98,13 +105,61 @@
     cursor: pointer;
 }
 
+/* Margen superior en botón confirmar */
 .botonConfirmar {
     margin-top: 25px;
 }
 
+/* Hover en botones */
 .botonTarjeta:hover,
 .botonConfirmar:hover {
     background-color: #D8CAB0;
     color: #23283C;
 }
 
+/* RESPONSIVE: media queries */
+
+@media(max-width: 1024px) {
+    /* Para pantallas medianas y grandes */
+    .contenido h2 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    .contenido p {
+        font-size: 18px;
+        padding: 20px;
+    }
+    .select {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+    .botonTarjeta,
+    .botonConfirmar {
+        padding: 15px 60px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 768px) {
+    /* Para móviles y pantallas pequeñas */
+    .contenido {
+        padding: 1.5rem;
+    }
+    .contenido h2 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    .contenido p {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .select {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+    .botonTarjeta,
+    .botonConfirmar {
+        padding: 12px 50px;
+        font-size: 13px;
+    }
+}

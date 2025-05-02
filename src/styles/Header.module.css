@@ -1,55 +1,63 @@
-/* ------------- Contenedor principal de la seccion con imagen de fondo - HEADER PPAL ----------------------- */
-.container_header {
-    background-image: url('../assets/img/header_imagen.jpeg'); /* Imagen de fondo */
-    height: 911px; /* Altura de la seccion */
-    width: 100%; /* Ancho completo */
-    background-size: cover; /* Para que la imagen cubra todo el contenedor */
-    background-position: center; /* Centrada */
-    background-repeat: no-repeat; /* No se repite la imagen (en caso de que sea muy chica, más para cuando hagamos el responsive) */
-    /*---------------*/
-    display: flex; 
-    flex-direction: column; /* Dirección vertical */
-    justify-content: space-between; /* Espacio entre los elementos hijos (la fecha) */
-    align-items: center; /* Centrado horizontal */
-    position: relative; /* Necesario para que el ::after se posicione respecto a este */
-    overflow: hidden; /* Oculta cualquier contenido que se salga (q la imagen sea mas ancha q el total de la pagina */
+/* Header.module.css */
+
+* {
+    box-sizing: border-box;
 }
 
-/* Capa oscura encima de la imagen */
+/* Contenedor principal con fondo y capa oscura */
+.container_header {
+    background-image: url('../assets/img/header_imagen.jpeg');
+    height: 911px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* espacio entre elementos */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Capa oscura overlay */
 .container_header::after {
-    content: ""; /* Obligatorio para que nos tome el ::after, o sea, se renderice. Pq el ::after está hecho para insertar 
-    decoraciones (en este caso la imagen mas oscura, se puede hacer lo mismo con los árboles.*/
-    position: absolute; /* Posicionamiento absoluto sobre el contenedor, q no se mueva cuando cambiamos otras cosas. */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%; /* Cubre toda la altura */
-    width: 100%; /* Cubre todo el ancho */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 30% */
-    z-index: 1; /* Por debajo del contenido */
-}
-/* NOTA:  El z index mueve los elementos en el eje Z,  es decir, los maneja como capas, el ::after tiene un Z-INDEX de 1 para
-    que esté por debajo de los textos (pao y dani, nos casamos)
-*/
-
-/* Este es para verificar que el contenido de la seccion esté por encima de la capa oscura 
-    Esto seria para que no se oscurezca todos los textos
-*/
-.container_header > * {
-    position: relative; 
-    z-index: 2; /* Más alto que el z-index de la capa oscura, */ 
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-
+/* Contenido */
 .container_items {
     display: flex;
     flex-direction: column;
-    width: 816px;
-    height: 211px;
-    justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 816px;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 2;
+    /* por encima del overlay */
 }
 
+/* Las imágenes que usas como subtitulo y titulo */
+.subtitulo,
+.titulo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Fecha */
 .fecha {
     display: flex;
     align-items: center;
@@ -57,27 +65,75 @@
     font-family: 'Cormorant Garamond';
     font-size: 96px;
     font-weight: 200;
-    gap: 25px;
-    margin-bottom: 70px;
     color: #F2F1EF;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    /* que envuelva en pantallas pequeñas */
+    text-align: center;
+    z-index: 10;
 }
 
 .seis {
     color: #D8CAB0;
 }
 
-.subtitulo {
-    width: 425px;
-    height: 68px;
-}
-
-.titulo {
-    padding: 35px;
-}
-
+/* El punto (.) de la fecha */
 .punto {
     font-size: 85px;
-    line-height: 1;        
+    line-height: 1;
     position: relative;
-    top: -10px;         
+    top: -10px;
+}
+
+@media (max-width: 1024px) {
+
+    /* Tamaños ajustados en pantallas medianas */
+    .fecha {
+        font-size: 60px;
+        margin-top: 50px;
+        z-index: 10;
+    }
+
+    .subtitulo,
+    .titulo {
+        max-width: 90%;
+        width: 100%;
+        height: auto;
+    }
+
+    .punto {
+        font-size: 60px;
+        top: -8px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* En pantallas pequeñas */
+    .container_header {
+        height: auto;
+        min-height: 600px;
+        padding: 10px;
+    }
+
+    .fecha {
+        font-size: 40px;
+        margin-top: 30px;
+        gap: 10px;
+        z-index: 10;
+    }
+
+    /* Las imágenes escalan bien en móvil */
+    .subtitulo,
+    .titulo {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .punto {
+        font-size: 40px;
+        top: -5px;
+    }
 }

@@ -6,43 +6,178 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem; /* Espacio interno para pantallas chicas */
-    box-sizing: border-box;
+    padding: 5rem;
+    font-family: 'Lora';
 }
 
 .modal {
     position: relative;
     background-color: #1b1d2e;
-    border: 1px solid #ccc;
-    border-radius: 0.75rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 80vw;
-    max-height: 95vh;
-    overflow: auto;
+    padding: 1rem 1rem;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
-.image {
-    width: 100%;
-    height: auto;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 0.5rem;
-}
-
-/* Botón cerrar */
 .closeButton {
     position: absolute;
-    top: 0.1rem;
-    right: 0.45rem;
-    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
     color: white;
-    background: none;
-    border: none;
+    background: #1b1d2e;
+    border: 2px solid #e9ddc7;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: color 0.2s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    z-index: 10;
 }
 
-.closeButton:hover {
-    color: #ff5a5a;
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('../assets/img/tarjetaFondo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    z-index: 100;
+    border-radius: 3px;
+}
+
+.cardContent {
+    color: #f1e8d8;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    z-index: 2;
+}
+
+.title {
+    font-size: 1.8rem !important; 
+    color: #D8CAB0 !important;
+}
+
+.amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.date {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.row div {
+    min-width: unset;
+}
+
+.row h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.3rem;
+}
+
+.row p {
+    font-size: 1rem !important;
+    margin: 0;
+}
+
+.cbuSection {
+    font-size: 0.85rem;
+    margin-top: 0.rem;
+}
+
+
+/* --- MEDIA QUERY RESPONSIVE --- */
+@media (max-width: 768px) {
+    .overlay {
+        padding: 2rem;
+    }
+
+    .modal {
+        width: 100%;
+        height: auto;
+        padding: 1rem 0.5rem;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    .cardContainer {
+        background-image: none;
+        background-color: #1b1d2e;
+        background: linear-gradient(to bottom, #1b1d2e, #2a2c44);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        border: 1px solid #D8CAB0;
+    }
+
+    .cardContent {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-size: 1.4rem !important;
+    }
+
+    .amount {
+        font-size: 1.2rem;
+    }
+
+    .date {
+        font-size: 1rem !important;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        position: relative;
+    }
+
+    .row::after {
+        content: "";
+        position: absolute;
+        bottom: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background-color: #D8CAB0;
+        opacity: 0.5;
+    }
+
+    .row h3, .row p {
+        font-size: 0.95rem !important;
+    }
+
+    .cbuSection {
+        font-size: 0.9rem;
+    }
+
+    .closeButton {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.2rem;
+    }
 }

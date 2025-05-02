@@ -1,3 +1,5 @@
+/* Estilos base existentes */
+
 .card {
     background: #d4d4d8;
     padding: 1rem;
@@ -6,9 +8,10 @@
     text-align: left;
     font-family: 'Lora';
     width: 80%;
-    margin-left: 3.7rem;
+    margin-left: 3.4rem;
 }
 
+/* Centrando párrafos dentro de .card en pantallas pequeñas */
 .card p {
     text-align: center;
 }
@@ -66,7 +69,6 @@ select {
     box-sizing: border-box;
 }
 
-
 select:focus {
     outline: none;
     border: none;
@@ -74,9 +76,42 @@ select:focus {
     border-color: #555;
 }
 
-
 select option {
     background-color: #23283C;
     color: #D8CAB0;
     padding: 1rem;
+}
+
+/* Media Queries para responsividad */
+
+@media (max-width: 768px) {
+    /* Para pantallas medianas y pequeñas (tablets y celulares) */
+    .card {
+        width: 90%;
+        margin-left: 2rem;
+        padding: 0.8rem;
+        border-radius: 10px;
+    }
+
+    /* Centrar el texto en los párrafos dentro de .card */
+    .card p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para celulares muy pequeños */
+    .card {
+        width: 95%;
+        margin-left: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    /* Ajustar tamaño de textos si es necesario */
+    label,
+    input,
+    select {
+        font-size: 0.9rem;
+    }
 }

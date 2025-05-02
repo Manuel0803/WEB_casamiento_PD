@@ -8,9 +8,9 @@ import Formulario from './components/Formulario'
 import Carrousel_Salon from './components/Carrousel_Salon'
 import instagram from './assets/img/INSTAGRAM.png'
 import spotify from './assets/img/SPOTIFY.png'
-import TarjetaModalRegalos from './components/TarjetaModalRegalos'
 import { useState } from 'react'
-
+import MusicBubble from './components/MusicBubble'
+import ModalRegalos from './components/ModalRegalos'
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
 
   return (
     <>
+      <MusicBubble />
       {/* COMPONENTE HEADER */}
       <Header />
 
@@ -107,17 +108,15 @@ function App() {
       <section className='container_regalos'>
         <div className='container_text_regalos'>
           <h3>REGALOS</h3>
-          <p>El mejor regalo es tu compañía, pero si desean <br />
-            hacernos un obsequio, nos encantaría que nos ayuden <br />
-            a cumplir el sueño de nuestra luna de miel.
+          <p className='text_regal'>El mejor regalo es tu compañía, pero si desean hacernos un obsequio, <br />
+          nos encantaría que nos ayuden a cumplir el sueño de nuestra luna de miel.
           </p>
-
-          <button
+          <button  
             className='alias_button'
             onClick={() => setMostrarTarjeta(true)}>
-            ALIAS
+            ALIAS  
           </button>
-          <TarjetaModalRegalos visible={mostrarTarjeta} onClose={() => setMostrarTarjeta(false)} />
+          <ModalRegalos visible={mostrarTarjeta} onClose={() => setMostrarTarjeta(false)}/>
 
         </div>
       </section>
