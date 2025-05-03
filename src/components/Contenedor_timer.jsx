@@ -61,7 +61,7 @@ export const Contenedor_timer = () => {
                     <div className={styles.circulo_azul}>
                         <div className={styles.texto_hora}>
                             <p className={styles.hora}>{timeLeft.minutes}</p>
-                            <p className={styles.tiempo}>MINUTOS</p>
+                            <p className={styles.tiempo_minutos}>MINUTOS</p>
                         </div>
                     </div>
                     <p className={styles.punto_faltan}>.</p>
@@ -69,7 +69,7 @@ export const Contenedor_timer = () => {
                     <div className={styles.circulo_azul}>
                         <div className={styles.texto_hora}>
                             <p className={styles.hora}>{timeLeft.seconds}</p>
-                            <p className={styles.tiempo}>SEGUNDOS</p>
+                            <p className={styles.tiempo_segundos}>SEGUNDOS</p>
                         </div>
                     </div>
                 </div>

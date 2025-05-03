@@ -1,0 +1,116 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+    color: #23283C;
+    font-size: 20px; 
+    margin-bottom: 1.5rem;
+    font-family: 'Lora';
+    font-weight: lighter;
+}
+
+.botonCerrar {
+    background-color: #23283C;
+    color: #D8CAB0;
+    padding: 0.8rem 2.5rem; 
+    border-radius: 30px;
+    font-family: 'Lora';
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.botonCerrar:hover {
+    background-color: #D8CAB0;
+    color: #23283C;
+}
+
+/* RESPONSIVE: media queries */
+
+/* Para pantallas grandes (más de 1024px) */
+@media(min-width: 1025px) {
+    .modal {
+        padding: 2.5rem;
+        max-width: 600px; 
+    }
+
+    .modal h3 {
+        font-size: 22px; 
+    }
+
+    .botonCerrar {
+        padding: 1rem 3rem;
+        font-size: 16px; 
+    }
+}
+
+/* Para pantallas medianas (hasta 1024px) */
+@media(max-width: 1024px) {
+    .modal {
+        padding: 2rem;
+        max-width: 450px; 
+
+    .modal h3 {
+        font-size: 18px;
+    }
+
+    .botonCerrar {
+        padding: 0.9rem 2.5rem;
+        font-size: 15px;
+    }
+}
+
+/* Para pantallas pequeñas (hasta 768px) */
+@media(max-width: 768px) {
+    .modal {
+        padding: 1.5rem;
+        max-width: 400px; 
+    }
+
+    .modal h3 {
+        font-size: 16px;
+    }
+
+    .botonCerrar {
+        padding: 0.8rem 2rem;
+        font-size: 14px; 
+    }
+}
+
+/* Para dispositivos muy pequeños (hasta 480px) */
+@media(max-width: 480px) {
+    .modal {
+        padding: 1.2rem;
+        max-width: 350px; 
+    }
+
+    .modal h3 {
+        font-size: 14px; 
+    }
+
+    .botonCerrar {
+        padding: 0.7rem 1.8rem;
+        font-size: 13px;
+    }
+}
+}

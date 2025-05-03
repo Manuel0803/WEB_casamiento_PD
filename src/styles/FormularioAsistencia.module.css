@@ -117,46 +117,75 @@
     color: #23283C;
 }
 
+.mensajeProceso {
+    margin: 10px 0;
+    font-family: 'Lora';
+    font-weight: lighter;
+    color: #23283C;
+}
 /* RESPONSIVE: media queries */
 
 @media(max-width: 1024px) {
+
     /* Para pantallas medianas y grandes */
     .contenido h2 {
         font-size: 28px;
         margin-top: 40px;
     }
+
     .contenido p {
         font-size: 18px;
         padding: 20px;
     }
+
     .select {
         width: 90%;
         font-size: 0.9rem;
     }
+
     .botonTarjeta,
     .botonConfirmar {
         padding: 15px 60px;
         font-size: 14px;
     }
+
+    .overlay_arboles {
+        background-image: url('../assets/img/arboles_azules.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 @media(max-width: 768px) {
     /* Para móviles y pantallas pequeñas */
+
+    .overlay_arboles {
+        background-image: url('../assets/img/arboles_azules.png');
+        background-repeat:repeat-x;
+        background-size: contain;
+        background-position: center;
+    }
+
     .contenido {
         padding: 1.5rem;
     }
+
     .contenido h2 {
         font-size: 24px;
         margin-top: 30px;
     }
+
     .contenido p {
         font-size: 16px;
         padding: 15px;
     }
+
     .select {
         width: 100%;
         font-size: 0.85rem;
     }
+
     .botonTarjeta,
     .botonConfirmar {
         padding: 12px 50px;

@@ -7,7 +7,7 @@
 /* Contenedor principal con fondo y capa oscura */
 .container_header {
     background-image: url('../assets/img/header_imagen.jpeg');
-    height: 911px;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* espacio entre elementos */
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -45,13 +44,12 @@
     margin: 0 auto;
     padding: 20px;
     z-index: 2;
-    /* por encima del overlay */
 }
 
 /* Las imágenes que usas como subtitulo y titulo */
 .subtitulo,
 .titulo {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     display: block;
     margin: 10px 0;
@@ -63,12 +61,11 @@
     align-items: center;
     justify-content: center;
     font-family: 'Cormorant Garamond';
-    font-size: 96px;
+    font-size: 80px;
     font-weight: 200;
     color: #F2F1EF;
     margin-top: 70px;
     flex-wrap: wrap;
-    /* que envuelva en pantallas pequeñas */
     text-align: center;
     z-index: 10;
 }
@@ -77,13 +74,59 @@
     color: #D8CAB0;
 }
 
-/* El punto (.) de la fecha */
 .punto {
     font-size: 85px;
     line-height: 1;
     position: relative;
     top: -10px;
 }
+
+
+/* Animación de entrada (cascada) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de flotación  */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Aplicar las animaciones a los elementos */
+.fecha {
+    opacity: 0;
+    animation: fadeInUp 1s forwards, float 3s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+.subtitulo {
+    opacity: 0;
+    animation: fadeInUp 1s forwards, float 3s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+.titulo {
+    opacity: 0;
+    animation: fadeInUp 1s forwards, float 3s ease-in-out infinite;
+    animation-delay: 0.9s;
+}
+
 
 @media (max-width: 1024px) {
 
@@ -111,27 +154,33 @@
 
     /* En pantallas pequeñas */
     .container_header {
-        height: auto;
-        min-height: 600px;
+        height: 100vh;
+        min-height: 100vh;
         padding: 10px;
     }
 
     .fecha {
         font-size: 40px;
-        margin-top: 30px;
+        margin-top: 10px;
+        margin-bottom: 50px;
         gap: 10px;
         z-index: 10;
     }
 
     /* Las imágenes escalan bien en móvil */
-    .subtitulo,
     .titulo {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
         display: block;
         margin: 10px 0;
     }
 
+    .subtitulo {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
     .punto {
         font-size: 40px;
         top: -5px;

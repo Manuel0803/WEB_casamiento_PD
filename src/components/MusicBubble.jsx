@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Music, VolumeX } from 'lucide-react';
-import music from '../assets/audio/UntilFound.mp3';
+import music from '../assets/audio/Cancion_casamiento.mp3';
 import styles from '../styles/MusicBubble.module.css';
 
 const MusicBubble = () => {

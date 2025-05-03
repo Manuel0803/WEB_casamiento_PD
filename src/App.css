@@ -37,8 +37,8 @@
     padding: 20px;
   }
   .pd_logo {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
   }
 }
 
@@ -93,10 +93,11 @@
 
 @media(max-width: 768px) {
   .contenedor_imagen_mano_anillo {
-    height: 70vh; /* Un poco menor en móviles */
+    height: 40vh; /* Un poco menor en móviles */
   }
   .img_logo_pd {
-    max-height: 50vh; /* Ajustar tamaño en móviles */
+    max-height: 35vh;
+    
   }
 }
 
@@ -488,6 +489,10 @@ hr {
 
 @media (max-width: 768px) {
 
+  .subtitlo_dos_iglesia {
+    text-wrap: balance;
+  }
+
   /* SECCION DRESS CODE */
   .container_dress {
     height: auto;
@@ -656,4 +661,30 @@ hr {
   .footer-container p {
     font-size: 16px;
   }
+}
+
+/* Personalización de scrollbar para navegadores compatibles */
+  
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D8CAB0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D8CAB0;
+  border-radius: 6px;
+  border: 3px solid #D8CAB0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #D8CAB0;
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #D8CAB0 #23283C;
 }

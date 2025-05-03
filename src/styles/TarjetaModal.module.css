@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 .overlay {
     position: fixed;
     inset: 0;
@@ -13,13 +15,15 @@
 .modal {
     position: relative;
     background-color: #1b1d2e;
-    padding: 1rem 1rem;
+    padding: 1rem;
     width: 80%;
-    height: 100%;
-    overflow: hidden;
+    max-height: 90vh;
+    overflow-y: auto;
     border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* Cierre de botón */
 .closeButton {
     position: absolute;
     top: 1rem;
@@ -39,6 +43,7 @@
     z-index: 10;
 }
 
+/* Tarjeta fondo */
 .cardContainer {
     display: flex;
     align-items: center;
@@ -47,9 +52,14 @@
     background-image: url('../assets/img/tarjetaFondo.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: center;
+    background-position: cover;
     z-index: 100;
     border-radius: 3px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .cardContent {
@@ -60,9 +70,11 @@
     z-index: 2;
 }
 
+/* Títulos y textos */
 .title {
     font-size: 1.8rem !important; 
     color: #D8CAB0 !important;
+    margin-bottom: 0.5rem;
 }
 
 .amount {
@@ -76,11 +88,12 @@
     margin-bottom: 1rem;
 }
 
+/* Filas en grid */
 .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
-    gap: 0.1rem;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -98,14 +111,15 @@
     margin: 0;
 }
 
+/* Sección CBU */
 .cbuSection {
     font-size: 0.85rem;
-    margin-top: 0.rem;
+    margin-top: 0.5rem;
 }
 
-
-/* --- MEDIA QUERY RESPONSIVE --- */
+/* --- MEDIA QUERIES RESPONSIVE --- */
 @media (max-width: 768px) {
+    /* Overlay y modal */
     .overlay {
         padding: 2rem;
     }
@@ -118,6 +132,7 @@
         overflow-y: auto;
     }
 
+    /* Fondo tarjeta en móvil */
     .cardContainer {
         background-image: none;
         background-color: #1b1d2e;
@@ -147,12 +162,15 @@
         font-size: 1rem !important;
     }
 
+    /* Filas en columna en móvil */
     .row {
         grid-template-columns: 1fr;
         gap: 1rem;
         position: relative;
+        margin-bottom: 2rem;
     }
 
+    /* Línea separadora en móvil */
     .row::after {
         content: "";
         position: absolute;
@@ -179,5 +197,49 @@
         width: 2rem;
         height: 2rem;
         font-size: 1.2rem;
+    }
+}
+
+/* Estilos para los círculos y reloj en móvil */
+@media (max-width: 768px) {
+    /* Contenedor que alinea los círculos y puntos en fila en móvil */
+    .container_circulos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+    }
+
+    /* Círculos más pequeños en móvil */
+    .circulo_azul {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+    }
+
+    /* Fuente del reloj y números en móvil */
+    .hora {
+        font-size: 35px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .tiempo, .tiempo_minutos, .tiempo_segundos {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Punto de los puntos en móvil */
+    .punto_faltan {
+        font-size: 35px;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

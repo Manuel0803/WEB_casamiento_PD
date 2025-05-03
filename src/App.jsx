@@ -32,7 +32,7 @@ function App() {
 
       {/* SECCION DE IMAGEN - ANILLO */}
       <section className="contenedor_imagen_mano_anillo">
-        <img className='img_logo_pd' src={LOGOPD} />
+        <img className="img_logo_pd" src={LOGOPD} alt="Logo PD" />
       </section>
 
 
@@ -113,14 +113,14 @@ function App() {
         <div className='container_text_regalos'>
           <h3>REGALOS</h3>
           <p className='text_regal'>El mejor regalo es tu compañía, pero si desean hacernos un obsequio, <br />
-          nos encantaría que nos ayuden a cumplir el sueño de nuestra luna de miel.
+            nos encantaría que nos ayuden a cumplir el sueño de nuestra luna de miel.
           </p>
-          <button  
+          <button
             className='alias_button'
             onClick={() => setMostrarTarjeta(true)}>
-            ALIAS  
+            ALIAS
           </button>
-          <ModalRegalos visible={mostrarTarjeta} onClose={() => setMostrarTarjeta(false)}/>
+          <ModalRegalos visible={mostrarTarjeta} onClose={() => setMostrarTarjeta(false)} />
 
         </div>
       </section>
@@ -130,11 +130,11 @@ function App() {
       <section className='container_instagram'>
         <h3>INSTAGRAM</h3>
         <div className='container_instagram_items'>
-          <button 
-          onClick={() => window.open('https://www.instagram.com/boda.pyd?utm_source=qr&igsh=MTc2NTJkOW5qYm9ycA%3D%3D', '_blank')}
-          className='photos_button_boda'>
+          <button
+            onClick={() => window.open('https://www.instagram.com/boda.pyd?utm_source=qr&igsh=MTc2NTJkOW5qYm9ycA%3D%3D', '_blank')}
+            className='photos_button_boda'>
             @boda.pyd
-            </button>
+          </button>
           <p>
             Queremos atesorar cada momento vivido. <br />
             Prepárate para nuestro casamiento,<br />
@@ -142,10 +142,10 @@ function App() {
             en tus fotos y videos.
           </p>
           <button
-          onClick={() => window.open('https://drive.google.com/drive/folders/1bqFika_LKFTmJsldtSqwzTsgAS6v4Bc0?usp=sharing', '_blank')}
-          className='photos_button'>
+            onClick={() => window.open('https://drive.google.com/drive/folders/1bqFika_LKFTmJsldtSqwzTsgAS6v4Bc0?usp=sharing', '_blank')}
+            className='photos_button'>
             ENVIANOS TUS FOTOS
-            </button>
+          </button>
         </div>
         <img src={instagram} alt="Nuestro instagram" />
       </section>
@@ -159,8 +159,8 @@ function App() {
         </div>
 
         <button
-        onClick={() => window.open('https://open.spotify.com/playlist/48i5RlYLWAz0CdYY2b7fst?si=594e815634bb4575&pt=fea086b071a3191c7e54fa9fd4997499', '_blank')} 
-        className='sugerir_cancion_button'
+          onClick={() => window.open('https://open.spotify.com/playlist/48i5RlYLWAz0CdYY2b7fst?si=594e815634bb4575&pt=fea086b071a3191c7e54fa9fd4997499', '_blank')}
+          className='sugerir_cancion_button'
         >SUGERIR CANCIÓN
         </button>
 
